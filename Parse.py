@@ -19,4 +19,11 @@ def run_command(filename, contents):
     language.get(fileext, "clj")
 
 def run_js(scriptFileLocation):
-    return os.popen('node '+ scriptFileLocation).read()
+    str = os.popen('node '+ scriptFileLocation).read()
+    print(str)
+    return str
+
+def run_py(scriptFileLocation):
+    str = os.popen('python3 ' + scriptFileLocation).read()
+    print(str)
+    return str
